@@ -26,25 +26,25 @@ $(document).ready(function() {
 						
   // initialize language
   var label_press = 'Inflate balloon';
-  var label_collect = 'Collect earnings';
-  var label_balance = 'Total earnings:';
-  var label_last = 'Earnings last round:';
+  var label_collect = 'Collect';
+  var label_balance = 'Total credit:';
+  var label_last = 'Win last round:';
   var label_currency = ' points';
   var label_times=' times';
   var label_header = 'Balloon Game Round ';
   var label_gonext1 = 'Start next round';
-  var label_gonext2 = 'End game';
-  var msg_explosion1 = '<p>The balloon exploded after pumping ';
-  var msg_explosion2 = ' times.</p> <p>Once inflated, the balloon burst, and you did not earn any money this round.</p>';
-  var label_present_time = 'Pumps made:';
-  var label_present_value = 'Earnings this round:';		
+  var label_gonext2 = 'end game';
+  var msg_explosion1 = '<p> The balloon is exploded after puming ';
+  var msg_explosion2 = ' times.</p> <p>Once inflated burst, you did not make any money this round </p>';
+  var label_present_time = 'Pumping times:';
+  var label_present_value = 'Earn this round:';		
 
   
-  var msg_collect1 = '<p>The balloon did not burst!</p><p>In this round, you earned ';
-  var msg_collect2 = ' points. </p> <p> The money you earned is safe in the bank.</p>';
+  var msg_collect1 = '<p>The balloon did not burst!</p><p>In this round you win';
+  var msg_collect2 = ' points. </p> <p> The money earned is safe in the bank.</p>';
 
-  var msg_end1 = '<p>This completes this part of the study. You have earned ';
-  var msg_end2 = ' points.</p> <p> Click <i>Next</i> to continue the study.</p>';
+  var msg_end1 = '<p>This completes this part of the study. You are in the balloon game ';
+  var msg_end2 = ' points made profit.</p> <p> Click <i> Next </i> to continue the study.</ p>';
   
   
   // initialize labels 
@@ -197,7 +197,7 @@ $(document).ready(function() {
   // collect button: release pressure and hope for money
   $('#collect').click(function() {
       if (pumps === 0) {
-	alert('You can only collect the money once you click "Inflate balloon”.');
+	alert('you can only collect the money once you click "Inflate ballon”.');
       }
       else if (pumps > 0) { // only works after at least one pump has been made
 	exploded.push(explosion); // save whether balloon has exploded or not
