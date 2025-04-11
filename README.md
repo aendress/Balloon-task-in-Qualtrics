@@ -1,4 +1,6 @@
 # Balloon-task-in-Qualtrics
+
+## Installation
 Here are the codes and images that you may need to deploy Balloon Analogue Risk Task into Qualtrics. 
 1. HTML page
 2. Javascript code
@@ -26,3 +28,19 @@ The steps you should follow to make the BART function well in Qualtrics:
 Notice: please be aware of that this task in not completeley the same as the seminal work, which was published by Lejuez and Read et al. in 2002, because when the balloon will burst in this task is set randomly, but in the seminal paper, the time when balloon is exploded is probabilistic. So this version is not perfect yet. If you are intertesd, you can work on this version to make a probabilistic one.
 
 Now the newest version of the BART which could be implemented in Qualtrics has a probablistic manner, thanks to Georg D. Granic's contribuion. 
+
+## Details 
+
+### Scoring 
+
+Each successful pump adds 0.25 points to present_win (the amount for the current round). To change this, change the following code (lines 166/167)
+
+```
+pumps += 1;
+present_win +=0.25;
+```
+
+
+
+
+
