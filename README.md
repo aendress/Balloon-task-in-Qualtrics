@@ -49,6 +49,11 @@ To adjust the number of trials, change the following code
 var rounds_played = 10;
 ```
 
+To change the desired risk level, you can also change the following code
+
+```
+var risk_level = 'unknown'; // could be low|medium|high
+```  
 
 ### Scoring 
 
