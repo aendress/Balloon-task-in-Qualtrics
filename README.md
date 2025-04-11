@@ -15,8 +15,9 @@ The steps you should follow to make the BART function well in Qualtrics:
  
  4.In the "survey flow", add "Set Embedded Data" to save the related data by clicking on the "add a new element here". The codes are as below: 
        
-       exploded = ${e://Field/number_pumps}
-       number_pumps= ${e://Field/number_pumps}
+       exploded = ${e://Field/exploded}
+       number_pumps = ${e://Field/number_pumps}
+       total_win = ${e://Field/total_win}
        
  Note that you need to create block of "set embedded data" AFTER the balloon block. Please refer to the picture named "embedded data".
        
