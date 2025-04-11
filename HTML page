@@ -140,8 +140,10 @@
 
 <body>
 
+<!-- These locations are now defined in the javascript file
 <audio id="explosion_sound" src="https://cityunilondon.eu.qualtrics.com/ControlPanel/File.php?F=F_avyGHMOPzwFlCj7" preload="auto"></audio>
 <audio id="tada_sound" src="https://cityunilondon.eu.qualtrics.com/ControlPanel/File.php?F=F_8KNsaaULnXzdboK" preload="auto"></audio>
+-->
 
 <div id="round"></div>
 
@@ -151,7 +153,8 @@
  <div id="ballonwrap">
   <div id="message"></div>
   <div id="gonext"></div>
-  <img src=https://cityunilondon.eu.qualtrics.com/ControlPanel/File.php?F=F_40Tzn0HhGZ6aH2P id="ballon" alt="Ballon">
+  <!-- This will be inserted dynamically-->
+  <!--<img src=https://cityunilondon.eu.qualtrics.com/ControlPanel/File.php?F=F_40Tzn0HhGZ6aH2P id="ballon" alt="Ballon">-->
  </div>
 
  <button type="button" id="press"></button>

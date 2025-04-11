@@ -5,6 +5,17 @@ Qualtrics.SurveyEngine.addOnload(function()
 
 $(document).ready(function() { 
 
+  // Define file sources. We will create the corresponding objects below
+  // we will select the correct image based on the risk level (i.e., the color of the balloon) below
+  var imageSrc = "https://cityunilondon.eu.qualtrics.com/ControlPanel/File.php?F=F_40Tzn0HhGZ6aH2P";
+  var explosionSoundSrc = "https://cityunilondon.eu.qualtrics.com/ControlPanel/File.php?F=F_avyGHMOPzwFlCj7";
+  var tadaSoundSrc = "https://cityunilondon.eu.qualtrics.com/ControlPanel/File.php?F=F_8KNsaaULnXzdboK";
+	
+  // Choose risk level 
+  // This will determine the color of the balloon, and the total number of trials
+  // Currently set to unknown so it has no effect	 
+  var risk_level = 'unknown'; // could be low|medium|high
+	
   // initialize values
   var round = 0;
   var start_size = 150; // start value of widht & height of the image; must correspond to the value that is specified for the #ballon id in style.css
@@ -12,7 +23,7 @@ $(document).ready(function() {
   var size; // start_size incremented by 'increase'
   var pumps; 
   var thanks;
-  var maximal_pumps=32;
+  var maximal_pumps = 32;
   var pumpmeup; // number pumps in a given round; is updated each round
   var number_pumps = []; // arrays for saving number of pumps
   var total = 0; // money that has been earned in total
@@ -23,6 +34,26 @@ $(document).ready(function() {
   var exploded = []; // array for saving whether ballon has exploded
   //var explode_array =  [15, 9,  16, 26, 22,  8, 27,  17, 23,  29,];
   var BurstProb; //Random variable that determines whether balloon burst
+  
+  // adjust parameters according to risk level
+  if (risk_level == 'low') {
+ 	// blue balloon
+ 	imageSrc = "https://cityunilondon.eu.qualtrics.com/ControlPanel/File.php?F=F_40Tzn0HhGZ6aH2P";
+ 	maximal_pumps = 128;
+ 	rounds_played = 30;
+  } else if (risk_level == 'medium') {
+ 	// yellow balloon (use the b)
+ 	imageSrc = 'xxx';
+ 	maximal_pumps = 32;
+ 	rounds_played = 30;  
+  } else if (risk_level == 'high') {
+    // orange balloon (is actually red, as I don't have an orange one)
+ 	imageSrc = "https://cityunilondon.eu.qualtrics.com/ControlPanel/File.php?F=F_hY1EabrdLWtP8Ps";
+ 	maximal_pumps = 8;
+ 	rounds_played = 30;  
+  } else {
+  	console.log("Unknown risk level, continuing with defaults")	
+  }
 						
   // initialize language
   var label_press = 'Inflate balloon';
@@ -46,6 +77,37 @@ $(document).ready(function() {
   var msg_end1 = '<p>This completes this part of the study. You have earned ';
   var msg_end2 = ' points.</p> <p> Click <i>Next</i> to continue the study.</p>';
   
+  // create sound and image objects
+  // Dynamically insert audio elements
+  var explosionSound = $('<audio>', {
+	id: 'explosion_sound',
+	src: explosionSoundSrc,
+	preload: 'auto'
+  });
+  $('body').append(explosionSound);
+
+  var tadaSound = $('<audio>', {
+	id: 'tada_sound',
+	src: tadaSoundSrc,
+	preload: 'auto'
+  });
+  $('body').append(tadaSound);
+  
+  // Dynamically insert balloon image
+  var balloonImg = $('<img>', {
+	id: 'ballon',
+	src: imageSrc,
+	alt: 'Balloon',
+	css: {
+    	height: start_size + 'px',
+	    width: start_size + 'px',
+    	marginRight: 'auto',
+	    marginLeft: 'auto',
+    	marginBottom: '-380px',
+    	display: 'none' // hidden until game starts
+  	}
+  });
+  $('#ballonwrap').append(balloonImg);
   
   // initialize labels 
   $('#press').html(label_press); 
