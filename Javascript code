@@ -40,11 +40,11 @@ $(document).ready(function() {
   var label_present_value = 'Earn this round:';		
 
   
-  var msg_collect1 = '<p> The balloon did not burst! </ p> <p> You deserve this round ';
-  var msg_collect2 = ' Points. </ p> <p> The money earned is safe in the bank.</p>';
+  var msg_collect1 = '<p>The balloon did not burst!</p><p>In this round you win';
+  var msg_collect2 = ' points. </p> <p> The money earned is safe in the bank.</p>';
 
-  var msg_end1 = '<p> This completes this part of the study. You are in the balloon game ';
-  var msg_end2 = ' points made profit. </ p> <p> Click <i> Next </ i> to continue the study. </ p>';
+  var msg_end1 = '<p>This completes this part of the study. You are in the balloon game ';
+  var msg_end2 = ' points made profit.</p> <p> Click <i> Next </i> to continue the study.</ p>';
   
   
   // initialize labels 
@@ -81,7 +81,7 @@ $(document).ready(function() {
     $('#ballon').width(size); 
     $('#ballon').height(size);
     $('#ballon').show();
-    $('#round').html('<h2>'+label_header+round+'<h2>');
+    $('#round').html('<h2>'+label_header+round+'</h2>');
 	$('#present_round').show();
 	$('#outcomes').hide();
 	$('#NextButton').hide();
@@ -197,7 +197,7 @@ $(document).ready(function() {
   // collect button: release pressure and hope for money
   $('#collect').click(function() {
       if (pumps === 0) {
-	alert('you can only collect the money once you click "给气球充气”。');
+	alert('you can only collect the money once you click "Inflate ballon”.');
       }
       else if (pumps > 0) { // only works after at least one pump has been made
 	exploded.push(explosion); // save whether balloon has exploded or not
