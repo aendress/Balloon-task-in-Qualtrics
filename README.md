@@ -25,11 +25,30 @@ The steps you should follow to make the BART function well in Qualtrics:
        
  5.Run the game and check the data.
 
-Notice: please be aware of that this task in not completeley the same as the seminal work, which was published by Lejuez and Read et al. in 2002, because when the balloon will burst in this task is set randomly, but in the seminal paper, the time when balloon is exploded is probabilistic. So this version is not perfect yet. If you are intertesd, you can work on this version to make a probabilistic one.
-
-Now the newest version of the BART which could be implemented in Qualtrics has a probablistic manner, thanks to Georg D. Granic's contribuion. 
-
 ## Details 
+
+### Difference from Lejuez et al, 2002 https://pubmed.ncbi.nlm.nih.gov/12075692/ and http://people.uncw.edu/ogler/Experimental/Fall%2008%20Final%20Paper%20Resources/BART.pdf
+
+#### Probablity of bursting and number of trials
+
+In Lejuez et al, 2002, there were 30 trials for each of three balloons associated with different probabilities of explosion. For the blue balloon:
+
+> The probability that a balloon would explode was arranged by constructing an array of N numbers. The number 1 was designated as indicating a balloon explosion. On each pump of the balloon, a number was selected without replacement from the array. The balloon exploded if the number 1 was selected. For example, the array for blue balloons contained the integers 1–128. Thus, the probability that a blue balloon would explode on the first pump was 1/128. If the balloon did not explode after the first pump, the probability that the balloon would explode was 1/127 on the second pump, 1/126 on the third pump, and so on up until the 128th pump, at which the probability of an explosion was 1/1 (i.e., 100%).
+
+Two other balloons were used with maximal numbers of pumps of 8 and 32, respectively. However, the correlation between risk taking (as measured by BART) and other measures of risk taking were strongest for the blue balloon, which is thus used here (see Magin et al., for a review, https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2023.1237734/full)
+
+To adjust the probability of bursting, change the following code:
+
+```
+var maximal_pumps=32;
+```
+
+To adjust the number of trials, change the following code
+
+```
+var rounds_played = 10;
+```
+
 
 ### Scoring 
 
