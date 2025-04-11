@@ -60,6 +60,10 @@ present_win +=0.25;
 ```
 
 
+## Other
 
+The "tada" sound is from https://freesound.org/s/397353/
+
+The explosion sound is from https://freesound.org/s/563197/
 
 

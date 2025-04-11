@@ -140,8 +140,8 @@
 
 <body>
 
-<audio id="explosion_sound" src="music/explosion.wav" preload="auto"></audio>
-<audio id="tada_sound" src="music/tada.wav" preload="auto"></audio>
+<audio id="explosion_sound" src="https://github.com/aendress/Balloon-task-in-Qualtrics/blob/master/563197__lukeo135__balloon-pop.wav" preload="auto"></audio>
+<audio id="tada_sound" src="https://github.com/aendress/Balloon-task-in-Qualtrics/blob/master/397353__plasterbrain__tada-fanfare-g.wav" preload="auto"></audio>
 
 <div id="round"></div>
 
