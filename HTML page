@@ -140,8 +140,8 @@
 
 <body>
 
-<audio id="explosion_sound" src="https://github.com/aendress/Balloon-task-in-Qualtrics/blob/master/563197__lukeo135__balloon-pop.wav" preload="auto"></audio>
-<audio id="tada_sound" src="https://github.com/aendress/Balloon-task-in-Qualtrics/blob/master/397353__plasterbrain__tada-fanfare-g.wav" preload="auto"></audio>
+<audio id="explosion_sound" src="https://cityunilondon.eu.qualtrics.com/ControlPanel/File.php?F=F_avyGHMOPzwFlCj7" preload="auto"></audio>
+<audio id="tada_sound" src="https://cityunilondon.eu.qualtrics.com/ControlPanel/File.php?F=F_8KNsaaULnXzdboK" preload="auto"></audio>
 
 <div id="round"></div>
 
@@ -151,7 +151,7 @@
  <div id="ballonwrap">
   <div id="message"></div>
   <div id="gonext"></div>
-  <img src=https://erasmusuniversity.eu.qualtrics.com/ControlPanel/Graphic.php?IM=IM_e40vZ7nffgjMnul id="ballon" alt="Ballon">
+  <img src=https://cityunilondon.eu.qualtrics.com/ControlPanel/File.php?F=F_40Tzn0HhGZ6aH2P id="ballon" alt="Ballon">
  </div>
 
  <button type="button" id="press"></button>
